@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#courses">Courses</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home">
+      <h1>Welcome to Our Educational Platform</h1>
+      <p>Learn from the best. Grow with the world.</p>
+      <button>Explore Courses</button>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about">
+      <h2>About Us</h2>
+      <p>
+        We are dedicated to providing high-quality educational resources to
+        students around the globe. Our mission is to make education accessible
+        to everyone.
+      </p>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses">
+      <h2>Our Courses</h2>
+      <div class="course-card">
+        <img src="maths.jpg" alt="Mathematics" />
+        <h3>Mathematics</h3>
+        <p>From basic algebra to advanced calculus.</p>
+        <button>Enroll Now</button>
+      </div>
+      <div class="course-card">
+        <img src="science.jfif" alt="Science" />
+        <h3>Science</h3>
+        <p>Explore the wonders of physics, chemistry, and biology.</p>
+        <button>Enroll Now</button>
+      </div>
+      <div class="course-card">
+        <img src="cse.jpg" alt="Computer Science" />
+        <h3>Computer Science</h3>
+        <p>Learn to code and develop software with our expert instructors.</p>
+        <button>Enroll Now</button>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Get in Touch</h2>
+      <form>
+        <input type="email" placeholder="Email Address" />
+        <textarea placeholder="Message"></textarea>
+        <button>Send Message</button>
+      </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+      <p>&copy; 2023 Educational Website. All rights reserved.</p>
+    </footer>
+
+    <script>
+      window.watsonAssistantChatOptions = {
+        integrationID: "a9c658af-270a-4f15-ae07-d628bd872dd3", // The ID of this integration.
+        region: "au-syd", // The region your integration is hosted in.
+        serviceInstanceID: "205ed5d2-db0e-4bb1-9a0c-8f785c341244", // The ID of your service instance.
+        onLoad: async (instance) => {
+          await instance.render();
+        },
+      };
+      setTimeout(function () {
+        const t = document.createElement("script");
+        t.src =
+          "https://web-chat.global.assistant.watson.appdomain.cloud/versions/" +
+          (window.watsonAssistantChatOptions.clientVersion || "latest") +
+          "/WatsonAssistantChatEntry.js";
+        document.head.appendChild(t);
+      });
+    </script>
+  </body>
+</html>
